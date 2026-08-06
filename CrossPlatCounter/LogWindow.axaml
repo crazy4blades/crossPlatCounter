@@ -1,0 +1,17 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="CrossPlatCounter.Views.LogWindow"
+        Width="400" Height="500"
+        Background="#0A0A14"
+        Title="Duel Log">
+
+    <TextBox Name="LogDisplay"
+             AcceptsReturn="True"
+             IsReadOnly="True"
+             Background="#14141E"
+             Foreground="Lime"
+             FontFamily="Consolas"
+             FontSize="16"
+             TextWrapping="Wrap"
+             Margin="10"/>
+</Window>

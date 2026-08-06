@@ -1,0 +1,45 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="CrossPlatCounter.Views.DiceWindow"
+        Width="500" Height="500"
+        Background="#0A141E"
+        Title="Dice Roller">
+
+    <Grid RowDefinitions="Auto,Auto,Auto,*" Margin="10">
+
+        <!-- Player Chooser -->
+        <ComboBox Name="PlayerChooser"
+                  Grid.Row="0"
+                  FontSize="20"
+                  SelectedIndex="0">
+            <ComboBoxItem Content="Player 1"/>
+            <ComboBoxItem Content="Player 2"/>
+        </ComboBox>
+
+        <!-- Dice Count -->
+        <NumericUpDown Name="DiceCount"
+                       Grid.Row="1"
+                       Minimum="1"
+                       Maximum="5"
+                       Value="1"
+                       FontSize="22"/>
+
+        <!-- Roll Button -->
+        <Button Name="RollButton"
+                Grid.Row="2"
+                Content="ROLL"
+                FontSize="26"
+                Background="#001A66"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Height="60"/>
+
+        <!-- Dice Panel -->
+        <WrapPanel Name="DicePanel"
+                   Grid.Row="3"
+                   Background="Black"
+                   Margin="10"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Top"/>
+    </Grid>
+</Window>

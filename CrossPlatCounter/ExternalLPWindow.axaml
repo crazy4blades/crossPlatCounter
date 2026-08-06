@@ -1,0 +1,47 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="CrossPlatCounter.Views.ExternalLPWindow"
+        Width="400" Height="250"
+        Background="Black"
+        Title="LP Overlay">
+
+    <Grid Name="RootGrid"
+          RowDefinitions="40*,60*"
+          ColumnDefinitions="50*,50*">
+
+        <!-- Player Names -->
+        <TextBlock Name="P1NameLabel"
+                   Grid.Row="0" Grid.Column="0"
+                   Text="Player 1"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Foreground="White"
+                   FontSize="24"/>
+
+        <TextBlock Name="P2NameLabel"
+                   Grid.Row="0" Grid.Column="1"
+                   Text="Player 2"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Foreground="White"
+                   FontSize="24"/>
+
+        <!-- LP Labels -->
+        <TextBlock Name="P1LPLabel"
+                   Grid.Row="1" Grid.Column="0"
+                   Text="0"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Foreground="White"
+                   FontSize="32"/>
+
+        <TextBlock Name="P2LPLabel"
+                   Grid.Row="1" Grid.Column="1"
+                   Text="0"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Foreground="White"
+                   FontSize="32"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,64 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="CrossPlatCounter.Views.MainWindow"
+        Width="920" Height="475"
+        MinWidth="920" MinHeight="475"
+        MaxWidth="920" MaxHeight="475"
+        CanResize="False"
+        Background="#050A12"
+        Title="Life Point Counter">
+
+
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto"
+          ColumnDefinitions="*,*"
+          Margin="20">
+
+        <!-- Player Names -->
+        <TextBox Grid.Row="0" Grid.Column="0" Name="P1Name" Text="Player 1" FontSize="20"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Name="P2Name" Text="Player 2" FontSize="20"/>
+
+        <!-- LP Labels -->
+        <TextBlock Grid.Row="1" Grid.Column="0" Name="P1LPLabel" Text="8000" FontSize="32" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" Name="P2LPLabel" Text="8000" FontSize="32" HorizontalAlignment="Center"/>
+
+        <!-- LP Inputs -->
+        <TextBox Grid.Row="2" Grid.Column="0" Name="P1Input" FontSize="22"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Name="P2Input" FontSize="22"/>
+
+        <!-- Buttons -->
+        <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal" Spacing="10">
+            <Button Name="P1Damage" Content="-" Width="100" Height="60" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Button Name="P1Heal" Content="+" Width="100" Height="60" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Button Name="P1Half" Content="1/2" Width="100" Height="60" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Button Name="P1Log" Content="LOG" Width="100" Height="60" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" Spacing="10">
+            <Button Name="P2Damage" Content="-" Width="100" Height="60" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Button Name="P2Heal" Content="+" Width="100" Height="60" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Button Name="P2Half" Content="1/2" Width="100" Height="60" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Button Name="P2Log" Content="LOG" Width="100" Height="60" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </StackPanel>
+
+        <!-- Numpads -->
+        <Grid Grid.Row="4" Grid.Column="0"
+              RowDefinitions="*,*,*,*"
+              ColumnDefinitions="*,*,*"
+              Name="P1NumpadGrid"/>
+
+        <Grid Grid.Row="4" Grid.Column="1"
+              RowDefinitions="*,*,*,*"
+              ColumnDefinitions="*,*,*"
+              Name="P2NumpadGrid"/>
+
+        <!-- Bottom Buttons -->
+        <StackPanel Grid.Row="5" Grid.ColumnSpan="2" Orientation="Horizontal" Spacing="10">
+            <Button Name="DiceButton" Content="ROLL DICE" Width="160" Height="70"/>
+            <Button Name="CoinButton" Content="FLIP COIN" Width="160" Height="70"/>
+            <Button Name="UndoButton" Content="UNDO" Width="160" Height="70"/>
+            <Button Name="ResetButton" Content="RESET" Width="160" Height="70"/>
+            <Button Name="LPWindowButton" Content="LP WINDOW" Width="160" Height="70"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
